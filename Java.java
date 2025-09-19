@@ -1,4 +1,4 @@
-// Строка
+// Список
 public class Main 
 {
     public static void main(String[] args)   
@@ -54,3 +54,4 @@ public class Stack<T>
     public int size()   
         {return (top + 1);}  
 }  
+
