@@ -1,3 +1,4 @@
+// Строка
 public class Main 
 {
     public static void main(String[] args)   
@@ -23,41 +24,33 @@ public class Main
 
 
 
-
-
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class Main 
-{
-    public static void main(String[] args) 
-    {
-        List<String> li = new ArrayList<>();   // Создание пустого списка строк
-        li.add("a");
-        li.add("1");
-        li.add("b");
-        li.add("2");
-        li.add("c");
-        li.add("3");
-        
-        List<String> li_1 = new ArrayList<>();  // Буквы
-        List<String> li_2 = new ArrayList<>();  // Числа
-        
-        // Разделяем список на буквы и числа
-        for (int i = 0; i < li.size(); i++)   // Цикл по всем элементам списка
-        {
-            if (i % 2 == 0)
-                {li_1.add(li.get(i));}  // Четные индексы - буквы
-            else 
-                {li_2.add(li.get(i));}  // Нечетные индексы - числа
-        }
-        
-        li.clear();  // Очищаем исходный список
-        
-        // Выводим полученные списки
-        System.out.println("Буквы: " + li_1);
-        System.out.println();   // Пустая строка для разделения
-        System.out.println("Числа: " + li_2);
-    }
-}
+// Стек
+public class Stack<T> 
+{  
+    private T stackArray;  
+    private int top;  
+    public Stack(int capacity) 
+    {  
+        stackArray = (T) new Object[capacity];  
+        top = -1;    // Инициализация вершины стека
+    }  
+    public void push(T item)   
+        {if (top == stackArray.length - 1)   // Проверка на переполнение стека
+            {throw new IllegalStateException("Stack overflow");}  
+        stackArray[++top] = item;  
+        }  
+    public T pop()   
+        {if (top == -1)   // Проверка на пустоту стека
+            {throw new IllegalStateException("Stack underflow");}  
+        return stackArray[top--];  
+        }  
+    public T peek() 
+        {if (top == -1)   // Проверка на пустоту стека
+            {throw new IllegalStateException("Stack is empty");}  
+        return stackArray[top]; 
+        }  
+    public boolean isEmpty()  
+        {return (top == -1);}  
+    public int size()   
+        {return (top + 1);}  
+}  
