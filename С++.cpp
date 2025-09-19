@@ -1,4 +1,4 @@
-// Строка
+// Список
 #include <iostream>    // Подключаем библиотеку
 using namespace std;
 
@@ -42,6 +42,7 @@ int main()
  
     std::cout << "stack size: " << stack.size() << std::endl;   // Выводим текущий размер стека (количество элементов)
 }
+
 
 
 
