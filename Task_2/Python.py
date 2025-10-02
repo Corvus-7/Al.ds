@@ -1,9 +1,9 @@
 Бинарная куча
 import heapq
-Numbers = [8, 3, 5, 1, 6, 2, 4, 7]  // создание списка с исходными данными для кучи
-heapq.heapify(Numbers) // превращение списка в кучу
-heapq.heappush(Numbers, 0) // добавление нового элемента в кучу
-minn = heapq.heappop(Numbers) // извлечение минимального элемента из кучи
+Numbers = [8, 3, 5, 1, 6, 2, 4, 7]  # создание списка с исходными данными для кучи
+heapq.heapify(Numbers) # превращение списка в кучу
+heapq.heappush(Numbers, 0) # добавление нового элемента в кучу
+minn = heapq.heappop(Numbers) # извлечение минимального элемента из кучи
 print(minn)
 
 
@@ -30,7 +30,6 @@ class BinomialHeap:
         if not self.head: return None
         min_node = min(self.nodes(), key=lambda x: x.key)
         
-        # Remove min and add children
         nodes = [x for x in self.nodes() if x != min_node]
         child = min_node.child
         while child:
@@ -165,4 +164,5 @@ print(ht.get("Alice"))  # January
 ht.remove("Bob")
 
 print(ht.get("Bob"))    # KeyError: Bo
+
 
