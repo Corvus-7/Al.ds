@@ -1,4 +1,4 @@
-//Бинарная куча
+Бинарная куча
 import heapq
 Numbers = [8, 3, 5, 1, 6, 2, 4, 7] // создание списка с исходными данными для кучи
 heapq.heapify(Numbers) // превращение списка в кучу
@@ -9,7 +9,7 @@ print(minn)
 
 
 
-//Биномиальная куча
+Биномиальная куча
 class BinomialHeap:
     class Node:
         slots = ('key', 'degree', 'child', 'sibling')
@@ -94,7 +94,7 @@ print(bh.get_min(), bh.extract_min(), bh.get_min())  # 5 5 10
 
 
 
-//Куча Фибоначчи
+Куча Фибоначчи
 import math
 class FibonacciHeap:
     def init(self):
@@ -132,7 +132,7 @@ print(fibonacci_heap.get_min())  # 7
 
 
 
-//Хеш-таблица
+Хеш-таблица
 class HashTable:
     def init(self, size):
         self.size = size
@@ -163,4 +163,5 @@ ht.set("Alice", "January")
 ht.set("Bob", "December")
 print(ht.get("Alice"))  # January
 ht.remove("Bob")
+
 print(ht.get("Bob"))    # KeyError: Bo
