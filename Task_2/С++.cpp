@@ -207,7 +207,7 @@ int main() {
 
 
 
-# Хеш-таблица
+// Хеш-таблица
 #include <iostream>
 #include <unordered_map>
 using namespace std;
@@ -218,4 +218,5 @@ int main() {
     cout << ht["Alice"] << endl;
     ht.erase("Alice");
     return 0;
+
 }
