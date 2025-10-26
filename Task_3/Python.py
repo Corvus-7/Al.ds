@@ -1,5 +1,8 @@
-### ** Сортировка обменом (пузырьком) (Bubble Sort) **
-<h1>Заголовок</h1>
+################### Алгоритмы сортировки
+
+
+##### Сортировка обменом (пузырьком) (Bubble Sort)
+
 def bubble_sort(arr):
     # Проходим по всем элементам массива
     n = len(arr)
@@ -10,7 +13,6 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]:
                 # Меняем местами, если порядок неправильный
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-
 # Исходный массив
 arr = [64, 34, 25, 12, 22, 11, 90]
 
@@ -21,7 +23,7 @@ print("Отсортированный массив:", arr)
 
 
 
-## Сортировка Шелла (Shellsort) 
+##### Сортировка Шелла (Shellsort) 
 
 def shell_sort(arr):
     n = len(arr)
@@ -40,7 +42,6 @@ def shell_sort(arr):
             # Вставляем temp на правильное место
             arr[j] = temp
         gap //= 2
-
 # Функция для вывода массива
 def print_array(arr):
     print(' '.join(map(str, arr)))
@@ -57,13 +58,11 @@ if __name__ == "__main__":
 
 
 
+################### Алгоритмы поиска
 
 
-####### Алгоритмы поиска
+##### Последовательный (линейный) поиск 
 
-## Последовательный (линейный) поиск 
-
-# Функция линейного поиска
 def linear_search(arr, target):
     # Проходим по всем элементам массива
     for index, element in enumerate(arr):
@@ -88,7 +87,7 @@ if __name__ == "__main__":
 
 
 
-## Поиск по Фибоначчи 
+##### Поиск по Фибоначчи 
 
 def fibonacci_search(arr, x):
 def fib(n):
@@ -97,7 +96,6 @@ a, b = 0, 1
 for in range(n + 1):
       yield a
       a, b = b, a + b
-
  # Находим минимальное число Фибоначчи, превышающее длину массива
  fib_numbers = list(fib(len(arr) + 1))
  fib_m = next((f for f in reversed(fib_numbers) if f >= len(arr)), None)
@@ -121,7 +119,6 @@ for in range(n + 1):
             fib_m2 = fib_m - fib_m1
         else:
             return i
-
     # Проверка последнего возможного места
     if fib_m1 and offset + 1 < len(arr) and arr[offset + 1] == x:
         return offset + 1
@@ -137,6 +134,3 @@ if result != -1:
     print(f'Элемент найден на позиции: {result}')
 else:
     print('Элемент не найден')
-
-
-
