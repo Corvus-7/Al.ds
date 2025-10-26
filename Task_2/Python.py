@@ -1,4 +1,3 @@
-> kk
 # Бинарная куча
 import heapq
 Numbers = [8, 3, 5, 1, 6, 2, 4, 7]  # создание списка с исходными данными для кучи
@@ -165,6 +164,7 @@ print(ht.get("Alice"))  # January
 ht.remove("Bob")
 
 print(ht.get("Bob"))    # KeyError: Bo
+
 
 
 
